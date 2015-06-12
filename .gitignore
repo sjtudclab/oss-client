@@ -1,0 +1,16 @@
+/target
+/.settings
+/.project
+/.classpath
+/.springBeans
+/.idea
+/distribution.dir_IS_UNDEFINED
+
+*.class
+*.jar
+*.war
+*.ear
+oss-client.iml
+
+.DS_Store
+bin/
