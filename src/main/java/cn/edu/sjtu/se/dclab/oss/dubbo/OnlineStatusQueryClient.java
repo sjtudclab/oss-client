@@ -14,11 +14,12 @@ public class OnlineStatusQueryClient  {
 	public static void main(String[] args) {
 		OnlineStatusQueryClient client = new OnlineStatusQueryClient();
 		System.out.println(client.checkOnline("3"));
+		System.out.println("Test execution");
 	}
 
 	public OnlineStatusQueryClient() {
 		String configLocation="dubbo-consumer.xml";
-		ApplicationContext context =new  ClassPathXmlApplicationContext(configLocation);
+		ApplicationContext context = new  ClassPathXmlApplicationContext(configLocation);
 		service = (OnlineStatusQueryService) context.getBean("onlineStatusService");
 		String [] names=context.getBeanDefinitionNames();
 		System.out.print("Beans:");
@@ -30,7 +31,7 @@ public class OnlineStatusQueryClient  {
 	}
 
 	public String checkOnline(String userId) {
-		String result = "[]";
+		String result = "";
 		result = service.checkOnline(userId);
 		return result;
 	}
